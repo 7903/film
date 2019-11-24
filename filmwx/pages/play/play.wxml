@@ -1,0 +1,13 @@
+<!--pages/play/play.wxml-->
+<view class="video_list">
+  <view class="title">预告片&拍摄花絮</view>
+  <view
+    class="video_item"
+    wx:for="{{ videoList }}"
+    wx:for-index="i"
+    wx:for-item="v"
+  >
+    <video src="{{ v.url }}" poster="{{v.image}}" title="{{v.title}}"></video>
+    <view class="name">{{ v.title }}</view>
+  </view>
+</view>

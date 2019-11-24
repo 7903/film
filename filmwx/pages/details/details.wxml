@@ -1,0 +1,72 @@
+<!--pages/details/details.wxml-->
+<view>
+  <view class="bg_img">
+    <image src="{{ details.data.basic.img }}"></image>
+  </view>
+  <view class="details_content">
+    <view class="mp" bindtap="play" data-id="{{ details.data.boxOffice.movieId }}">
+      <view class="mp_img">
+        <image src="{{ details.data.basic.img }}"></image>
+      </view>
+      <view class="mp_text">
+        <text class="name">{{ details.data.basic.name }}</text>
+        <text class="nameEn">{{ details.data.basic.nameEn }}</text>
+        <text class="type">{{ type }}</text>
+        <text class="mins">{{ details.data.basic.mins }}</text>
+        <text class="overallRating">{{
+          details.data.basic.overallRating
+        }}</text>
+      </view>
+    </view>
+
+    <view class="introduce">
+      <view class="blank_1"></view>
+      <view class="story">
+        {{ details.data.basic.story }}
+      </view>
+      <view class="blank_2"></view>
+      <view class="actors" wx:if="{{ details.data.basic.actors.length }}">
+        <view class="actors_text"
+          >{{ details.data.basic.actors.length }}位演职员<text class="stills" bindtap="stills" data-id="{{ details.data.boxOffice.movieId }}">剧照</text></view
+        >
+        <view class="actors_itme">
+          <view class="itme_box">
+            <view
+              class="itme"
+              wx:for="{{ details.data.basic.actors }}"
+              wx:for-index="i"
+              wx:for-item="v"
+            >
+              <image src="{{ v.img }}"></image>
+              <view class="actors_name">{{ v.name }}</view>
+              <view class="actors_nameEn">{{ v.nameEn }}</view>
+              <view>角色名称：</view>
+              <view class="actors_roleName">{{ v.roleName }}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank_3"></view>
+
+      <view class="comment">
+        <view class="individual" wx:for="{{comment.mini.list}}" wx:for-item="v">
+          <view class="left">
+            <view class="headImg">
+                <image src="{{v.headImg}}"></image>
+            </view>
+          </view>
+          <view class="right">
+            <view class="comment_top">
+                <text class="comment_name">{{v.nickname}}</text>
+                <text class="comment_date">2019-11-18</text> - 评
+                <text class="comment_rating">{{v.rating}}</text>
+            </view>
+            <view class="comment_text">
+                {{v.content}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

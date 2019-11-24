@@ -1,0 +1,69 @@
+/* pages/stills/stills.wxss */
+.stills {
+    height: 100vh;
+}
+
+.type {
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+    display: flex;
+}
+
+.type text {
+    flex: 1;
+    width: 20%;
+    text-align: center;
+    font-size: 13px;
+}
+
+.active {
+    background-color: #fff;
+}
+
+.img_box {
+    height: calc(100vh - 40px);
+}
+
+.img_box .img {
+    display: inline-block;
+    width: 33.33%;
+    height: 180px;
+    border: 5px solid #fff;
+    box-sizing: border-box;
+}
+
+.img_box .img image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.enlarge_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .5);
+    animation: enlarge .2s forwards linear;
+}
+
+@keyframes enlarge {
+    0% {
+        width: 0vw;
+        height: 0vh;
+    }
+
+    100% {
+        width: 100vw;
+        height: 100vh;
+    }
+
+}
+
+.enlarge_img image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

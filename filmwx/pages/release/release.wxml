@@ -1,0 +1,30 @@
+<!--pages/release/release.wxml-->
+<view>
+  <view class="list">
+    <!-- <view> -->
+    <view
+      class="hot_data"
+      wx:for="{{ soonList.moviecomings }}"
+      wx:for-index="i"
+      wx:for-item="v"
+      bindtap="details"
+      data-id="{{ v.id }}"
+    >
+      <view class="hot-list">
+        <view class="img">
+          <image src="{{ v.image }}"></image>
+        </view>
+        <view class="text">
+          <text class="title">{{ v.title }}</text>
+          <text class="lead"
+            >{{ v.actor1 }} / {{ v.actor2 }} / {{ v.actor3 }}</text
+          >
+          <text class="label">{{ v.type }}</text>
+          <text class="introduce">{{ v.releaseDate }}</text>
+          <text class="date">{{ v.locationName }}</text>
+        </view>
+      </view>
+    </view>
+    <!-- </view>{{hotlist.ms[0].aN1}} -->
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view>
+  <view class="list">
+    <!-- <view> -->
+    <view
+      class="hot_data"
+      wx:for="{{ now.movies }}"
+      wx:for-index="i"
+      wx:for-item="v"
+      wx:key="{{ v.movieId }}"
+      bindtap="details"
+      data-id="{{ v.movieId }}"
+    >
+      <view class="hot-list">
+        <view class="img">
+          <image src="{{ v.img }}"></image>
+        </view>
+        <view class="text">
+          <text class="title"
+            >{{ v.titleCn
+            }}<text class="score" wx:if="{{ v.r > 0 }}">{{ v.r }}</text></text
+          >
+          <text class="lead">{{ v.actorName1 }} / {{ v.actorName2 }}</text>
+          <text class="label">{{ v.type }}</text>
+          <text class="introduce">{{ v.commonSpecial }}</text>
+          <text class="date">{{ v.rYear }}-{{ v.rMonth }}-{{ v.rDay }}</text>
+        </view>
+      </view>
+    </view>
+    <!-- </view>{{hotlist.ms[0].aN1}} -->
+  </view>
+</view>

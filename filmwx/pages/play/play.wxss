@@ -1,0 +1,20 @@
+/* pages/play/play.wxss */
+.video_item{
+    width: 100vw;
+    margin-bottom: 20px;
+}
+
+.video_item video{
+    width: 100%;
+}
+
+.video_item .name{
+    margin-left: 20px;
+}
+
+.title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 20px;
+}

@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/release/release",
+    "pages/sellTicket/sellTicket",
+    "pages/details/details",
+    "pages/play/play",
+    "pages/stills/stills"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "览预电影",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ofc",
+    "borderStyle": "white",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "正在热播"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "即将上映"
+      },
+      {
+        "pagePath": "pages/sellTicket/sellTicket",
+        "text": "正在售票"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
